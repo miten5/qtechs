@@ -18,7 +18,7 @@ export default function About() {
                     {/* Left Content */}
                     <div className="space-y-8">
                         <div>
-                            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">About DevCraft</h2>
+                            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">About QTechs</h2>
                             <p className="text-lg text-gray-600 leading-relaxed mb-6">
                                 We are a passionate team of developers, designers, and digital strategists dedicated to creating exceptional digital experiences. With over 5 years of experience, we've helped businesses of all sizes achieve their
                                 digital goals.
