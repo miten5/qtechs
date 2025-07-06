@@ -7,7 +7,7 @@ export default function Hero() {
     return (
         <section id="home" className="pt-24 pb-20 bg-gradient-to-br from-gray-50 to-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
+                <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[60vh]">
                     {/* Left Content */}
                     <div className="space-y-8">
                         <div className="space-y-4">
@@ -24,10 +24,6 @@ export default function Hero() {
                             <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8">
                                 Start Your Project
                                 <ArrowRight className="ml-2 h-5 w-5" />
-                            </Button>
-                            <Button variant="outline" size="lg" className="text-lg px-8 bg-transparent">
-                                <Play className="mr-2 h-5 w-5" />
-                                Watch Demo
                             </Button>
                         </div>
 

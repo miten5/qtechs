@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-export default function Portfolio() {
+export default function PortfolioPage() {
     const projects = [
         {
             title: "E-Commerce Platform",
@@ -56,7 +56,7 @@ export default function Portfolio() {
     ];
 
     return (
-        <section id="portfolio" className="py-20 bg-white">
+        <section id="portfolio" className="pt-24 pb-20 bg-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Portfolio</h2>
@@ -99,9 +99,9 @@ export default function Portfolio() {
                 </div>
 
                 <div className="mt-8 flex justify-end">
-                    <Link href="/portfolio" className="text-sm text-gray-500 hover:text-gray-700 transition-colors duration-200">
-                        View more projects →
-                    </Link>
+                    <a href="/" className="text-sm text-gray-500 hover:text-gray-700 transition-colors duration-200">
+                        Load more →
+                    </a>
                 </div>
             </div>
         </section>

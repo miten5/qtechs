@@ -1,7 +1,8 @@
 "use client"
 
 import { useState } from "react"
-import { Menu, Code2 } from "lucide-react"
+import { Menu } from "lucide-react"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 
@@ -9,12 +10,12 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "Services", href: "#services" },
-    { name: "About", href: "#about" },
-    { name: "Portfolio", href: "#portfolio" },
+    { name: "Home", href: "/#home" },
+    { name: "Services", href: "/#services" },
+    { name: "About", href: "/#about" },
+    { name: "Portfolio", href: "/#portfolio" },
     // { name: "Team", href: "#team" },
-    { name: "Contact", href: "#contact" },
+    { name: "Contact", href: "/#contact" },
   ]
 
   return (
@@ -24,21 +25,23 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <div className="">
+              <Link href="/">
               <img src={"/logo52.png"} alt="Logo"/>
+              </Link>
             </div>
-            {/* <span className="text-xl font-bold text-gray-900">Techs</span> */}
+            
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
                 href={item.href}
                 className="text-gray-700 hover:text-primary transition-colors duration-200 font-medium"
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
             <Button className="bg-primary hover:bg-primary/90">Get Started</Button>
           </div>
@@ -54,14 +57,14 @@ export default function Navbar() {
               <SheetContent side="right" className="w-[300px] sm:w-[400px]">
                 <div className="flex flex-col space-y-4 mt-8">
                   {navItems.map((item) => (
-                    <a
+                    <Link
                       key={item.name}
                       href={item.href}
                       className="text-lg font-medium text-gray-700 hover:text-primary transition-colors duration-200"
                       onClick={() => setIsOpen(false)}
                     >
                       {item.name}
-                    </a>
+                    </Link>
                   ))}
                   <Button className="bg-primary hover:bg-primary/90 mt-4">Get Started</Button>
                 </div>
