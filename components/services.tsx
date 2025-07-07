@@ -1,46 +1,51 @@
-import { Code, Smartphone, Globe, Database, Cloud, Shield } from "lucide-react"
+import { Code, Smartphone, Globe, User, ChartBar, Shield } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
 export default function Services() {
   const services = [
-    {
-      icon: Globe,
-      title: "Web Development",
-      description:
-        "Custom websites and web applications built with modern technologies like React, Next.js, and Node.js.",
-      features: ["Responsive Design", "SEO Optimized", "Fast Loading", "Modern UI/UX"],
-    },
-    {
-      icon: Smartphone,
-      title: "Mobile Development",
-      description: "Native and cross-platform mobile apps for iOS and Android using React Native and Flutter.",
-      features: ["Cross-Platform", "Native Performance", "App Store Ready", "Push Notifications"],
-    },
-    {
-      icon: Code,
-      title: "Custom Software",
-      description: "Tailored software solutions to meet your specific business requirements and workflows.",
-      features: ["Scalable Architecture", "API Integration", "Database Design", "Cloud Deployment"],
-    },
-    {
-      icon: Database,
-      title: "Backend Development",
-      description: "Robust server-side solutions with secure APIs, databases, and cloud infrastructure.",
-      features: ["RESTful APIs", "Database Optimization", "Security First", "Microservices"],
-    },
-    {
-      icon: Cloud,
-      title: "Cloud Solutions",
-      description: "Cloud migration, deployment, and management services for scalable applications.",
-      features: ["AWS/Azure/GCP", "DevOps", "Auto Scaling", "Cost Optimization"],
-    },
-    {
-      icon: Shield,
-      title: "Maintenance & Support",
-      description: "24/7 monitoring, updates, and technical support to keep your applications running smoothly.",
-      features: ["24/7 Monitoring", "Regular Updates", "Bug Fixes", "Performance Optimization"],
-    },
-  ]
+  {
+    icon: Globe,
+    title: "Web Development",
+    description:
+      "Custom websites and web applications built with modern technologies like React, Next.js, and Node.js.",
+    features: ["Responsive Design", "SEO Optimized", "Fast Loading", "Modern UI/UX"],
+  },
+  {
+    icon: Smartphone,
+    title: "Mobile Development",
+    description:
+      "Native and cross-platform mobile apps for iOS and Android using React Native and Flutter.",
+    features: ["Cross-Platform", "Native Performance", "App Store Ready", "Push Notifications"],
+  },
+  {
+    icon: Code,
+    title: "Custom Software",
+    description:
+      "Tailored software solutions to meet your specific business requirements and workflows.",
+    features: ["Scalable Architecture", "API Integration", "Database Design", "Cloud Deployment"],
+  },
+  {
+    icon: User,
+    title: "Social Media Management",
+    description:
+      "Boost your online presence with strategic content creation, audience engagement, and analytics-driven growth.",
+    features: ["Content Planning", "Engagement Boosting", "Analytics Reports", "Platform Management"],
+  },
+  {
+    icon: ChartBar,
+    title: "Digital Marketing",
+    description:
+      "Comprehensive marketing strategies including SEO, paid ads, email marketing, and conversion optimization.",
+    features: ["SEO & SEM", "Email Campaigns", "Google & Meta Ads", "Conversion Tracking"],
+  },
+  {
+    icon: Shield,
+    title: "Maintenance & Support",
+    description:
+      "24/7 monitoring, updates, and technical support to keep your applications running smoothly.",
+    features: ["24/7 Monitoring", "Regular Updates", "Bug Fixes", "Performance Optimization"],
+  },
+];
 
   return (
     <section id="services" className="py-20 bg-white">

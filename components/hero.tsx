@@ -1,5 +1,5 @@
 import { ArrowRight, Play } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import Image from "next/image";
 import coding from "@/public/coding-28.svg";
 
@@ -21,16 +21,16 @@ export default function Hero() {
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-4">
-                            <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8">
+                            <Link href="/#contact" className="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 text-primary-foreground h-11 rounded-md bg-primary hover:bg-primary/90 text-lg px-8">
                                 Start Your Project
                                 <ArrowRight className="ml-2 h-5 w-5" />
-                            </Button>
+                            </Link>
                         </div>
 
                         {/* Stats */}
                         <div className="grid grid-cols-3 gap-8 pt-8 border-t border-gray-200">
                             <div>
-                                <div className="text-3xl font-bold text-primary">150+</div>
+                                <div className="text-3xl font-bold text-primary">50+</div>
                                 <div className="text-gray-600">Projects Completed</div>
                             </div>
                             <div>
@@ -38,7 +38,7 @@ export default function Hero() {
                                 <div className="text-gray-600">Client Satisfaction</div>
                             </div>
                             <div>
-                                <div className="text-3xl font-bold text-primary">5+</div>
+                                <div className="text-3xl font-bold text-primary">8+</div>
                                 <div className="text-gray-600">Years Experience</div>
                             </div>
                         </div>

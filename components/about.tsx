@@ -7,7 +7,7 @@ export default function About() {
 
     const stats = [
         { icon: Users, number: "50+", label: "Team Members" },
-        { icon: Award, number: "150+", label: "Projects Delivered" },
+        { icon: Award, number: "50+", label: "Projects Delivered" },
         { icon: Target, number: "98%", label: "Success Rate" },
     ];
 
@@ -20,7 +20,7 @@ export default function About() {
                         <div>
                             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">About QTechs</h2>
                             <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                                We are a passionate team of developers, designers, and digital strategists dedicated to creating exceptional digital experiences. With over 5 years of experience, we've helped businesses of all sizes achieve their
+                                We are a passionate team of developers, designers, and digital strategists dedicated to creating exceptional digital experiences. With over 8 years of experience, we've helped businesses of all sizes achieve their
                                 digital goals.
                             </p>
                             <p className="text-lg text-gray-600 leading-relaxed">Our mission is to transform your ideas into powerful, scalable, and user-friendly digital solutions that drive real business results.</p>
@@ -55,7 +55,7 @@ export default function About() {
                         <Image src={about} alt="About Us" className="w-full h-auto" />
                         <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-primary rounded-2xl flex items-center justify-center">
                             <div className="text-white text-center">
-                                <div className="text-2xl font-bold">5+</div>
+                                <div className="text-2xl font-bold">8+</div>
                                 <div className="text-xs">Years</div>
                             </div>
                         </div>

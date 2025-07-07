@@ -1,9 +1,16 @@
 import { Code2, Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import Link from "next/link";
 
 export default function Footer() {
     const services = ["Web Development", "Mobile Apps", "Custom Software", "Cloud Solutions", "UI/UX Design", "Consulting"];
 
-    const company = ["About Us", "Our Team", "Careers", "Blog", "Case Studies", "Contact"];
+    // [privacy policy, terms of service, cookie policy, sitemap];
+    const company = [
+        { name: "About Us", href: "/#about" },
+        { name: "Services", href: "/#services" },
+        { name: "Portfolio", href: "/#portfolio" },
+        { name: "Contact", href: "/#contact" },
+    ];
 
     const resources = ["Documentation", "Help Center", "Privacy Policy", "Terms of Service", "Cookie Policy", "Sitemap"];
 
@@ -53,9 +60,9 @@ export default function Footer() {
                         <ul className="space-y-3">
                             {company.map((item, index) => (
                                 <li key={index}>
-                                    <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
-                                        {item}
-                                    </a>
+                                    <Link href={item.href} className="text-gray-400 hover:text-white transition-colors duration-200">
+                                        {item.name}
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
@@ -79,7 +86,7 @@ export default function Footer() {
                 {/* Bottom Section */}
                 <div className="border-t border-gray-800 mt-12 pt-8">
                     <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-                        <div className="text-gray-400 text-sm">&copy; { new Date().getFullYear() }  QTechs. All rights reserved.</div>
+                        <div className="text-gray-400 text-sm">&copy; {new Date().getFullYear()} QTechs. All rights reserved.</div>
                         <div className="flex space-x-6">
                             <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">
                                 <Facebook className="w-5 h-5" />

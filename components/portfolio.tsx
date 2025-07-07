@@ -6,12 +6,11 @@ import Link from "next/link";
 export default function Portfolio() {
     const projects = [
         {
-            title: "E-Commerce Platform",
+            title: "Inspiration Research",
             description: "Modern e-commerce solution with React, Node.js, and Stripe integration",
-            image: "/placeholder.svg?height=300&width=400",
-            tags: ["React", "Node.js", "MongoDB", "Stripe"],
-            liveUrl: "#",
-            githubUrl: "#",
+            image: "/portfolio/inspirationresearch-ca.png",
+            tags: ["NextJs", "Node.js", "MongoDB", "TypeScript"],
+            liveUrl: "https://inspirationresearch.ca/",
         },
         {
             title: "Healthcare Management System",
@@ -19,7 +18,6 @@ export default function Portfolio() {
             image: "/placeholder.svg?height=300&width=400",
             tags: ["Next.js", "PostgreSQL", "Tailwind", "TypeScript"],
             liveUrl: "#",
-            githubUrl: "#",
         },
         {
             title: "Real Estate App",
@@ -27,7 +25,6 @@ export default function Portfolio() {
             image: "/placeholder.svg?height=300&width=400",
             tags: ["React Native", "Firebase", "Maps API", "Redux"],
             liveUrl: "#",
-            githubUrl: "#",
         },
         {
             title: "Financial Dashboard",
@@ -35,7 +32,6 @@ export default function Portfolio() {
             image: "/placeholder.svg?height=300&width=400",
             tags: ["Vue.js", "D3.js", "Express", "MySQL"],
             liveUrl: "#",
-            githubUrl: "#",
         },
         {
             title: "Learning Management System",
@@ -43,7 +39,6 @@ export default function Portfolio() {
             image: "/placeholder.svg?height=300&width=400",
             tags: ["Angular", "NestJS", "AWS", "WebRTC"],
             liveUrl: "#",
-            githubUrl: "#",
         },
         {
             title: "Social Media Analytics",
@@ -51,9 +46,9 @@ export default function Portfolio() {
             image: "/placeholder.svg?height=300&width=400",
             tags: ["Python", "Django", "Redis", "Celery"],
             liveUrl: "#",
-            githubUrl: "#",
         },
     ];
+    let projectsLength = projects.length;
 
     return (
         <section id="portfolio" className="py-20 bg-white">
@@ -66,21 +61,17 @@ export default function Portfolio() {
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {projects.map((project, index) => (
                         <Card key={index} className="group overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300">
-                            <div className="relative overflow-hidden">
+                            <div className="relative border-solid border-gray-400 overflow-hidden">
                                 <img src={project.image || "/placeholder.svg"} alt={project.title} className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" />
                                 <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
-                                    <Button size="sm" variant="secondary" asChild>
-                                        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                                            <ExternalLink className="w-4 h-4 mr-2" />
-                                            Live Demo
-                                        </a>
-                                    </Button>
-                                    <Button size="sm" variant="secondary" asChild>
-                                        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                                            <Github className="w-4 h-4 mr-2" />
-                                            Code
-                                        </a>
-                                    </Button>
+                                    {project.liveUrl && (
+                                        <Button size="sm" variant="secondary" asChild>
+                                            <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                                                <ExternalLink className="w-4 h-4 mr-2" />
+                                                Live Demo
+                                            </a>
+                                        </Button>
+                                    )}
                                 </div>
                             </div>
                             <CardContent className="p-6">
@@ -98,11 +89,12 @@ export default function Portfolio() {
                     ))}
                 </div>
 
-                <div className="mt-8 flex justify-end">
+
+                {projectsLength > 6 && (<div className="mt-8 flex justify-end">
                     <Link href="/portfolio" className="text-sm text-gray-500 hover:text-gray-700 transition-colors duration-200">
                         View more projects →
                     </Link>
-                </div>
+                </div>)}
             </div>
         </section>
     );
